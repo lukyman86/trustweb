@@ -1,9 +1,9 @@
-import { NotificationCenter } from "@/components/notification-center"
+import { NotificationProvider } from "@/path/to/notification-context"; // ganti path sesuai project kamu
 
-export default function NotificationsPage() {
+export default function NotificationsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="container py-6">
-      <NotificationCenter />
-    </div>
-  )
+    <NotificationProvider>
+      {children}
+    </NotificationProvider>
+  );
 }
